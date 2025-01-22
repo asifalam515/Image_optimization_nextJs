@@ -2,12 +2,16 @@ export const metadata = {
   title: "HomePage",
 };
 const HomePage = async () => {
-  const res = await fetch("http://localhost:5000/shoes");
+  const res = await fetch("http://localhost:5000/shoes", {
+    next: {
+      revalidate: 5,
+    },
+  });
   const shoes = await res.json();
   return (
     <div>
-      <h1 className="text-5xl text-center">Hello From Next js</h1>
-      <div className="flex">
+      <h1 className="text-5xl text-center">Hello From Next js part 12</h1>
+      <div className="flex justify-between p-5">
         {shoes.slice(0, 3).map((shoe) => (
           <div key={shoe.id} className="card bg-base-100 w-96 shadow-xl">
             <figure>
@@ -17,10 +21,16 @@ const HomePage = async () => {
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h2 className="card-title">
+                {shoe.title}
+                <div className="badge badge-secondary"> {shoe.price} </div>
+              </h2>
+              <p> {shoe.details} </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn btn-outline btn-primary">Buy Now</button>
+                <button className="btn btn-outline btn-secondary">
+                  Show Details
+                </button>
               </div>
             </div>
           </div>
