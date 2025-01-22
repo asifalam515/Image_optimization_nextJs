@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "HomePage",
 };
@@ -9,7 +11,7 @@ const HomePage = async () => {
   });
   const shoes = await res.json();
   return (
-    <div>
+    <div className="text-center my-5">
       <h1 className="text-5xl text-center">Hello From Next js part 12</h1>
       <div className="flex justify-between p-5">
         {shoes.slice(0, 3).map((shoe) => (
@@ -36,6 +38,9 @@ const HomePage = async () => {
           </div>
         ))}
       </div>
+      <Link href="/all-shoes" className="btn btn-outline btn-primary">
+        See More
+      </Link>
     </div>
   );
 };
