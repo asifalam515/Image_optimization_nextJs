@@ -1,18 +1,12 @@
-export const metadata = {
-  title: "HomePage",
-};
-const HomePage = async () => {
-  const res = await fetch("http://localhost:5000/shoes", {
-    next: {
-      revalidate: 30,
-    },
-  });
+const AllShoesPage = async () => {
+  const res = await fetch("http://localhost:5000/shoes");
   const shoes = await res.json();
+
   return (
     <div>
-      <h1 className="text-5xl text-center">Hello From Next js part 12</h1>
-      <div className="flex justify-between p-5">
-        {shoes.slice(0, 3).map((shoe) => (
+      <h1 className="text-3xl text-center">All Shoes</h1>
+      <div className="grid grid-cols-3 gap-4">
+        {shoes.map((shoe) => (
           <div key={shoe.id} className="card bg-base-100 w-96 shadow-xl">
             <figure>
               <img
@@ -40,4 +34,4 @@ const HomePage = async () => {
   );
 };
 
-export default HomePage;
+export default AllShoesPage;
