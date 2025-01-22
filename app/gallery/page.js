@@ -1,6 +1,11 @@
 import Image from "next/image";
 import nextImage from "../../src/asset/next_img.png";
 
+export const metadata = {
+  title: "Gallery Page",
+  description: "Gallery Will be Here",
+};
+
 const GalleryPage = () => {
   return (
     <div>

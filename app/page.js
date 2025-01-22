@@ -1,5 +1,6 @@
-import React from "react";
-
+export const metadata = {
+  title: "HomePage",
+};
 const HomePage = () => {
   return (
     <div>
