@@ -1,5 +1,6 @@
 import Image from "next/image";
-import nextImage from "../../src/asset/next_img.png";
+// import nextImage from "../../src/asset/next_img.png";
+import nextImage from "@/src/asset/next_img.png";
 
 export const metadata = {
   title: "Gallery Page",
