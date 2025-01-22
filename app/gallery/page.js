@@ -1,21 +1,18 @@
 import Image from "next/image";
+import nextImage from "../../src/asset/next_img.png";
 
 const GalleryPage = () => {
   return (
     <div>
-      <h1 className="text-3xl text-center">Image Optimizations</h1>
-      <h2 className="text-center text-2xl">Regular Image with Image Tag</h2>
-      <br />
-      <img
-        className="mx-auto"
-        src="https://nextjs.org/api/docs-og?title=Components%20%3CImage%3E"
-        alt="basic img"
-      />
+      <h1 className="text-3xl text-center">
+        Image Optimizations by Next Image
+      </h1>
+
       <br />
       <Image
-        className="mx-auto"
-        src="https://nextjs.org/api/docs-og?title=Components%20%3CImage%3E"
+        src={nextImage}
         alt="next image"
+        // fill
         width={500}
         height={500}
         quality={100}
