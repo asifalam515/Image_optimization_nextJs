@@ -1,0 +1,39 @@
+{
+    "shoes": [
+        {
+            "id": 1,
+            "title": "Air Max 270",
+            "description": "Lightweight and stylish running shoes with excellent cushioning.",
+            "price": 150,
+            "shoes": "Nike"
+        },
+        {
+            "id": 2,
+            "title": "Ultraboost 22",
+            "description": "High-performance shoes with responsive cushioning for long-distance runs.",
+            "price": 180,
+            "shoes": "Adidas"
+        },
+        {
+            "id": 3,
+            "title": "Gel-Kayano 30",
+            "description": "Stability running shoes with superior comfort and durability.",
+            "price": 160,
+            "shoes": "Asics"
+        },
+        {
+            "id": 4,
+            "title": "Fresh Foam 1080v11",
+            "description": "Premium daily trainers with plush cushioning and a breathable upper.",
+            "price": 170,
+            "shoes": "New Balance"
+        },
+        {
+            "id": 5,
+            "title": "Chuck Taylor All Star",
+            "description": "Classic canvas sneakers with a timeless design.",
+            "price": 60,
+            "shoes": "Converse"
+        }
+    ]
+}
